@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Fortune Cookie - Autorizacion</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 600px; margin: 80px auto; text-align: center; background: #111; color: #eee; }
+  h2 { color: #4CAF50; }
+  #code { font-size: 1.1em; background: #222; padding: 15px; border-radius: 8px; word-break: break-all; margin: 20px 0; }
+  button { background: #4CAF50; color: white; border: none; padding: 10px 24px; border-radius: 6px; cursor: pointer; font-size: 1em; }
+  button:hover { background: #45a049; }
+  .error { color: #f44336; }
+</style>
+</head>
+<body>
+<h2>Autorizacion completada</h2>
+<p>Copia este codigo y pegalo en la terminal:</p>
+<div id="code">Cargando...</div>
+<button onclick="copyCode()">Copiar codigo</button>
+<p id="status"></p>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  const error = params.get('error');
+  if (code) {
+    document.getElementById('code').textContent = code;
+  } else if (error) {
+    document.getElementById('code').innerHTML = '<span class="error">Error: ' + error + '</span>';
+  } else {
+    document.getElementById('code').textContent = 'No se recibio codigo.';
+  }
+  function copyCode() {
+    navigator.clipboard.writeText(code || '').then(() => {
+      document.getElementById('status').textContent = 'Copiado!';
+    });
+  }
+</script>
+</body>
+</html>
