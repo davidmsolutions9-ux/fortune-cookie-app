@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Cookie App</title>
+  <link rel="icon" type="image/png" href="icon.png">
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #fff7ed; color: #333; min-height: 100vh; display: flex; flex-direction: column; }
+        header { background: #ff2d55; color: white; padding: 20px; text-align: center; }
+              header img { width: 80px; height: 80px; border-radius: 16px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; }
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; opacity: 0.9; margin-top: 6px; }
+    main { flex: 1; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    .card { background: white; border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .card h2 { font-size: 1.4rem; color: #ff2d55; margin-bottom: 12px; }
+        .card p { line-height: 1.7; color: #555; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+    .feature { background: #fff7ed; border-radius: 8px; padding: 16px; text-align: center; }
+        .feature span { font-size: 2rem; }
+    .feature p { font-size: 0.9rem; margin-top: 6px; }
+    footer { background: #333; color: #ccc; text-align: center; padding: 24px 20px; }
+        footer a { color: #ff2d55; text-decoration: none; margin: 0 12px; font-weight: bold; }
+          footer a:hover { text-decoration: underline; }
+    footer .links { margin-bottom: 12px; font-size: 1rem; }
+  </style>
+    </head>
+    <body>
+      <header>
+        <img src="icon.png" alt="Fortune Cookie App icon">
+        <h1>Fortune Cookie App</h1>
+    <p>Daily fortune cookie wisdom delivered automatically to TikTok</p>
+      </header>
+      <main>
+        <div class="card">
+          <h2>About the App</h2>
+      <p>Fortune Cookie App generates short, inspirational fortune cookie videos and uploads them automatically as drafts to your TikTok creator account using the TikTok Content Posting API. Authenticate once with TikTok Login Kit and let the app do the rest.</p>
+        </div>
+        <div class="card">
+          <h2>Features</h2>
+          <div class="features">
+            <div class="feature"><span>🥠</span><p>Auto-generates fortune cookie phrases</p></div>
+            <div class="feature"><span>🎬</span><p>Creates short videos automatically</p></div>
+            <div class="feature"><span>📤</span><p>Uploads drafts to TikTok via API</p></div>
+        <div class="feature"><span>🔒</span><p>Secure OAuth 2.0 login with TikTok</p></div>
+      </div>
+        </div>
+        <div class="card">
+          <h2>How It Works</h2>
+      <p>1. Sign in with your TikTok creator account.<br>2. The app generates a fortune cookie video.<br>3. The video is uploaded as a draft to your TikTok inbox.<br>4. Review and publish the draft whenever you are ready.</p>
+    </div>
+  </main>
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+    </div>
+        <p>&copy; 2025 Fortune Cookie App. All rights reserved.</p>
+  </footer>
+    </body>
+</html>
